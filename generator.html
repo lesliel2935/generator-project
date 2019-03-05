@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>jQuery template</title>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  
-    <script> //my own jQuery/javascript
-        $(function(){ //DONT DELETE THIS
-            
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+        //my own jQuery/javascript
+        $(function() { //DONT DELETE THIS
+            $("button").click(function() {
+                var name = $("#name").val()
+                var first = $("#first").val()
+                var last = $("#last").val()
+                var phone = $("#phone").val()
+                var address = $("#address").val()
+                var city = $("#city").val()
+                var state = $("#state").val()
+                var zipcode = $("#zipcode").val()
+                var font = $('#font').val()
+                var background = $("#background").val()
+
+                var info=first+" " + last+" "+ phone
+                var full= address+" "+ city+" "+state+" "+ zipcode
+               
+                $("#title").html(name).css({"font-size":"30px", "font-family": font});
+                $("#more").html(info).css({"font-size":"20px"})
+                $("#add").html(full).css({"font-size": "20px"})
+                
+                var image = $("#background").val()
+                
+               $("#par").css({"background": image, "background-repeat": "no-repeat", "background-position":"left","background-size":" cover", "padding":"100px 200px",  "border-color": color, "border-style":"solid", "border-width": "3px"})
+            });
+
         });
     </script>
-  </head>
-  <body>
-  <form>
-   Business Name:<input id="name"><br>
-   Phone #: <input id="phone" placeholder="Type(###)-###-### "><br>
-   Address: <input id="address" placeholder="123 45st"><br>
-   City:<input id="city"><br>
+<style>
+   #par{
+       height:150px;
+       width:200px;
    
-   Zipcode: <input id="zipcode" placeholder="11220"><br>
-   Font Style:<input id="font" type="radio" name="font">Sedgwick Ave <input id="font" type="radio" name="font">Times New Roman <input id="font" type="radio" name="font">Dancing Script<br>
-   Border Color:<input id= "color" type="color" name="favcolor" value="#ff0000">
+   }
+   #title{
+        text-align: center;
+        font-size: 50px;
+        
+   }
    
-   </form>
-  </body>
- 
+</style>
+
+<body>
+    <!--<form>-->
+    Business Name:<input id="name"><br> First Name: <input id="first"><br> Last Name: <input id="last"><br> Phone #: <input id="phone" placeholder="Type(###)-###-### "><br> Address: <input id="address" placeholder="123 45st"><br> City:
+    <input id="city"><br> State: <input id="state"><br> Zipcode: <input id="zipcode" placeholder="11220"><br> 
+    Font Style:<input id="font" type="radio" name="font" value="Arial">Arial <input id="font" type="radio" name="font" value="Times New Roman">Times
+    New Roman <input id="font" type="radio" name="font">Dancing Script<br> Text Color:
+    <select id="color">
+        <option value="black">Black</option>
+        <option value="white">White</option>
+    </select>
+    Background:
+    <select id="background">
+        <option value=url(blue.jpg)>Blue</option>
+        <option value=url(blueflower.jpg)>Blue flower</option>
+        <option value=url(fancy.jpg)>Fancy</option>
+        <option value=url(nature.jpg)>Nature</option>
+        <option value=url(purpleflower.jpg)>Purple Flower</option>
+   </select><br>
+    <button>Create Buisness Card</button>
+
+    <!--</form>-->
+<div id="par">
+    <div id="title">
+    </div>
+    <div id="more">
+        
+    </div>
+    <div id="add">
+        
+    </div>
+</div>
+
+</body>
+
+
 </html>
