@@ -18,19 +18,19 @@
                 var city = $("#city").val()
                 var state = $("#state").val()
                 var zipcode = $("#zipcode").val()
-                var font = $('#font').val()
+                
                 var background = $("#background").val()
 
                 var info=first+" " + last+" "+ phone
                 var full= address+" "+ city+" "+state+" "+ zipcode
                
-                $("#title").html(name).css({"font-size":"30px", "font-family": font});
+                $("#title").html(name).css({"font-size":"30px", "font-family": "arial"});
                 $("#more").html(info).css({"font-size":"20px"})
                 $("#add").html(full).css({"font-size": "20px"})
                 
                 var image = $("#background").val()
                 
-               $("#par").css({"background": image, "background-repeat": "no-repeat", "background-position":"left","background-size":" cover", "padding":"100px 200px",  "border-color": color, "border-style":"solid", "border-width": "3px"})
+               $("#par").css({"background": image, "background-repeat": "no-repeat", "background-position":"left","background-size":" cover", "padding":"100px 200px",  "border-color":"black", "border-style":"solid", "border-width": "3px"})
             });
 
         });
@@ -53,17 +53,10 @@
     <!--<form>-->
     Business Name:<input id="name"><br> First Name: <input id="first"><br> Last Name: <input id="last"><br> Phone #: <input id="phone" placeholder="Type(###)-###-### "><br> Address: <input id="address" placeholder="123 45st"><br> City:
     <input id="city"><br> State: <input id="state"><br> Zipcode: <input id="zipcode" placeholder="11220"><br> 
-    Font Style:<input id="font" type="radio" name="font" value="Arial">Arial <input id="font" type="radio" name="font" value="Times New Roman">Times
-    New Roman <input id="font" type="radio" name="font">Dancing Script<br> Text Color:
-    <select id="color">
-        <option value="black">Black</option>
-        <option value="white">White</option>
-    </select>
     Background:
     <select id="background">
         <option value=url(blue.jpg)>Blue</option>
         <option value=url(blueflower.jpg)>Blue flower</option>
-        <option value=url(fancy.jpg)>Fancy</option>
         <option value=url(nature.jpg)>Nature</option>
         <option value=url(purpleflower.jpg)>Purple Flower</option>
    </select><br>
